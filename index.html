@@ -82,6 +82,26 @@
             transform: scale(1.02);
         }
 
+        /* Outline Button Style */
+        .btn-outline-luxury {
+            border: 1px solid #e2e8f0;
+            background: white;
+            color: #1e293b;
+            transition: all 0.4s;
+            border-radius: 2px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-outline-luxury:hover {
+            border-color: var(--premium-red);
+            color: var(--premium-red);
+            background: rgba(153, 27, 27, 0.02);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(153, 27, 27, 0.05);
+        }
+
         .red-accent-line {
             height: 2px;
             width: 50px;
@@ -89,7 +109,7 @@
             margin: 1rem 0;
         }
 
-        /* Large background lettering effect - Responsive scaling */
+        /* Large background lettering effect */
         .bg-watermark {
             position: absolute;
             right: -10%;
@@ -157,7 +177,6 @@
                 <a href="#enroll" class="btn-luxury px-4 lg:px-6 py-2 lg:py-2.5">ENROLL NOW</a>
             </div>
 
-            <!-- Mobile Enroll Button -->
             <div class="md:hidden">
                 <a href="#enroll" class="btn-luxury px-4 py-2 text-[10px] font-bold uppercase tracking-widest">Enroll</a>
             </div>
@@ -171,7 +190,6 @@
 
         <div class="max-w-7xl mx-auto relative z-10 w-full py-12 md:py-20">
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-                <!-- Text Content -->
                 <div class="flex-1 text-center lg:text-left">
                     <div class="inline-flex items-center justify-center lg:justify-start gap-3 text-red-700 font-bold tracking-widest text-[10px] sm:text-xs uppercase mb-4 sm:mb-6">
                         <span class="hidden sm:block w-8 h-[1px] bg-red-700"></span> Institutional Grade Education
@@ -185,15 +203,20 @@
                     <p class="text-sm sm:text-base md:text-lg text-gray-600 font-light leading-relaxed mb-8 sm:mb-12 max-w-xl mx-auto lg:mx-0">
                         We don't teach "trading." We teach institutional market mechanics. Step away from retail noise and enter the realm of professional price action mastery.
                     </p>
+                    
                     <div class="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4 sm:gap-6">
-                        <a href="#enroll" class="btn-luxury px-8 sm:px-12 py-4 sm:py-5 text-xs sm:text-sm font-bold uppercase tracking-widest">Apply NOW</a>
-                        <div class="bg-white border border-gray-200 px-6 sm:px-10 py-4 sm:py-5 text-[10px] sm:text-sm font-bold uppercase tracking-widest flex items-center justify-center gap-3">
-                            <i class="fas fa-shield-halved text-red-800"></i> Professional Grade
-                        </div>
+                        <a href="#enroll" class="btn-luxury px-8 sm:px-12 py-4 sm:py-5 text-xs sm:text-sm font-bold uppercase tracking-widest shadow-xl">
+                            Apply NOW
+                        </a>
+                        
+                        <a href="https://t.me/preetthisside" target="_blank" class="btn-outline-luxury px-8 sm:px-12 py-4 sm:py-5 text-xs sm:text-sm font-bold uppercase tracking-widest gap-3 group">
+                            <i class="fab fa-telegram-plane text-red-800 text-lg group-hover:scale-110 transition-transform"></i>
+                            Live Results
+                        </a>
                     </div>
                 </div>
 
-                <!-- 48-HOUR LAUNCH PASS CARD -->
+                <!-- 48-HOUR Pass Card -->
                 <div class="w-full lg:w-[45%] xl:w-[48%]">
                     <div class="bg-white p-1 shadow-xl sm:shadow-2xl rounded-sm">
                         <div class="border border-red-900/10 p-6 sm:p-10 flex flex-col items-center text-center">
@@ -335,7 +358,6 @@
             </div>
 
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 border border-gray-100">
-                <!-- Day Blocks - Responsive Grid -->
                 <div class="group relative p-6 sm:p-8 border border-gray-50 hover:bg-red-900 transition-all duration-500">
                     <span class="serif-heading text-2xl sm:text-4xl text-gray-100 group-hover:text-white/20 leading-none">01</span>
                     <h4 class="font-bold text-[9px] sm:text-[10px] lg:text-xs mt-4 sm:mt-6 group-hover:text-white uppercase tracking-wider">Market Behaviour</h4>
@@ -402,7 +424,6 @@
     <section id="enroll" class="py-20 md:py-32 bg-slate-50 px-4 sm:px-8">
         <div class="max-w-5xl mx-auto">
             <div class="grid md:grid-cols-2 gap-4 sm:gap-px bg-gray-200 border border-gray-200 shadow-2xl rounded-sm overflow-hidden">
-                <!-- Trial -->
                 <div class="bg-white p-8 sm:p-12 flex flex-col">
                     <h4 class="serif-heading text-xl sm:text-2xl mb-2">The Initiation</h4>
                     <p class="text-[10px] text-red-700 font-bold uppercase tracking-widest mb-8">2-Day Foundation Trial</p>
@@ -415,7 +436,6 @@
                     <a href="https://wa.me/918837841183" class="mt-auto border border-gray-900 py-4 text-center text-[10px] font-bold uppercase tracking-widest hover:bg-gray-900 hover:text-white transition">Begin Trial</a>
                 </div>
 
-                <!-- Full -->
                 <div class="bg-white p-8 sm:p-12 flex flex-col relative">
                     <div class="absolute top-0 right-0 bg-red-800 text-white px-3 sm:px-4 py-1 text-[9px] sm:text-[10px] font-bold tracking-tighter">LAUNCH OFFER</div>
                     <h4 class="serif-heading text-xl sm:text-2xl mb-2">APC Mastery</h4>
@@ -457,14 +477,6 @@
                     </summary>
                     <p class="mt-4 text-gray-500 text-xs sm:text-sm leading-relaxed">No. Phase 01 of the student journey involves stripping away retail indicators to focus on pure price action and institutional fingerprints.</p>
                 </details>
-                
-                <details class="group luxury-card p-5 sm:p-6 rounded-none cursor-pointer">
-                    <summary class="font-bold flex justify-between items-center list-none uppercase tracking-widest text-[10px] sm:text-xs">
-                        Is APC 2.0 suitable for beginners?
-                        <span class="group-open:rotate-180 transition-transform">↓</span>
-                    </summary>
-                    <p class="mt-4 text-gray-500 text-xs sm:text-sm leading-relaxed">Yes. We build from raw market mechanics upwards. We prefer students with no prior 'retail indicator' knowledge as there's less to de-learn.</p>
-                </details>
             </div>
         </div>
     </section>
@@ -477,6 +489,7 @@
                 <p class="text-[9px] sm:text-[10px] text-gray-400 mt-2 tracking-widest uppercase font-bold">© 2026. Institutional Grade Price Action.</p>
             </div>
             <div class="flex gap-8 sm:gap-10 opacity-60 hover:opacity-100 transition">
+                <a href="https://t.me/preetthisside" target="_blank" class="text-xl sm:text-2xl hover:text-red-800"><i class="fab fa-telegram-plane"></i></a>
                 <a href="https://wa.me/918837841183" class="text-xl sm:text-2xl hover:text-red-800"><i class="fab fa-whatsapp"></i></a>
                 <a href="mailto:preetthisside09@gmail.com" class="text-xl sm:text-2xl hover:text-red-800"><i class="far fa-envelope"></i></a>
             </div>
@@ -484,9 +497,16 @@
     </footer>
 
     <script>
-        // Set countdown to 48 hours from initial load
-        const now = new Date().getTime();
-        const endDate = now + (48 * 60 * 60 * 1000);
+        // Use localStorage to persist the end date across refreshes
+        let endDate = localStorage.getItem('apc_countdown_end');
+        
+        if (!endDate) {
+            // If no end date is stored, set it to 48 hours from now
+            endDate = new Date().getTime() + (48 * 60 * 60 * 1000);
+            localStorage.setItem('apc_countdown_end', endDate);
+        } else {
+            endDate = parseInt(endDate);
+        }
         
         function updateTimer() {
             const currentTime = new Date().getTime();
@@ -501,6 +521,7 @@
                 return;
             }
 
+            // Calculate hours, minutes, seconds
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
             const seconds = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, '0');
