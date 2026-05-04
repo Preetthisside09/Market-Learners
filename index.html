@@ -82,7 +82,6 @@
             transform: scale(1.02);
         }
 
-        /* Outline Button Style */
         .btn-outline-luxury {
             border: 1px solid #e2e8f0;
             background: white;
@@ -109,7 +108,6 @@
             margin: 1rem 0;
         }
 
-        /* Large background lettering effect */
         .bg-watermark {
             position: absolute;
             right: -10%;
@@ -141,29 +139,8 @@
 </head>
 <body class="antialiased">
 
-    <!-- LAUNCHING DISCOUNT BANNER -->
-    <div id="flash-sale-banner" class="bg-red-950 text-white py-3 px-4 sm:px-8 sticky top-0 z-[60] border-b border-red-900/50">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
-            <div class="flex items-center gap-2 sm:gap-3 text-center sm:text-left">
-                <span class="bg-red-700 text-white text-[9px] sm:text-[10px] font-bold px-2 py-1 rounded shrink-0">LAUNCH OFFER</span>
-                <p class="text-[10px] sm:text-xs font-medium tracking-wide italic">Official Launch: 20% OFF on APC 2.0!</p>
-            </div>
-            
-            <div class="flex items-center gap-4 sm:gap-6">
-                <div id="countdown" class="flex gap-3 sm:gap-4 font-mono text-base sm:text-lg font-bold">
-                    <div class="flex flex-col items-center"><span id="h">00</span><span class="text-[7px] sm:text-[8px] uppercase font-sans tracking-widest opacity-60">Hrs</span></div>
-                    <span class="opacity-30">:</span>
-                    <div class="flex flex-col items-center"><span id="m">00</span><span class="text-[7px] sm:text-[8px] uppercase font-sans tracking-widest opacity-60">Min</span></div>
-                    <span class="opacity-30">:</span>
-                    <div class="flex flex-col items-center text-red-500"><span id="s">00</span><span class="text-[7px] sm:text-[8px] uppercase font-sans tracking-widest opacity-60">Sec</span></div>
-                </div>
-                <a href="https://wa.me/918837841183" class="bg-white text-red-950 px-3 sm:px-4 py-1.5 text-[9px] sm:text-[10px] font-bold uppercase tracking-widest hover:bg-red-800 hover:text-white transition">Claim</a>
-            </div>
-        </div>
-    </div>
-
     <!-- NAVIGATION -->
-    <nav class="w-full z-50 bg-white/95 backdrop-blur-xl border-b border-gray-100">
+    <nav class="w-full z-50 bg-white/95 backdrop-blur-xl border-b border-gray-100 sticky top-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-8 h-16 sm:h-20 flex justify-between items-center">
             <div class="flex flex-col">
                 <span class="serif-heading text-lg sm:text-xl font-bold text-gray-900 leading-none">MARKET</span>
@@ -174,7 +151,7 @@
                 <a href="#philosophy" class="hover:text-red-700 transition">Philosophy</a>
                 <a href="#roadmap" class="hover:text-red-700 transition">Roadmap</a>
                 <a href="#curriculum" class="hover:text-red-700 transition">Curriculum</a>
-                <a href="#enroll" class="btn-luxury px-4 lg:px-6 py-2 lg:py-2.5">ENROLL NOW</a>
+                <a href="#enroll" class="btn-luxury px-4 lg:px-6 py-2 lg:py-2.5 text-white">ENROLL NOW</a>
             </div>
 
             <div class="md:hidden">
@@ -216,33 +193,11 @@
                     </div>
                 </div>
 
-                <!-- 48-HOUR Pass Card -->
-                <div class="w-full lg:w-[45%] xl:w-[48%]">
-                    <div class="bg-white p-1 shadow-xl sm:shadow-2xl rounded-sm">
-                        <div class="border border-red-900/10 p-6 sm:p-10 flex flex-col items-center text-center">
-                            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-red-50 rounded-full flex items-center justify-center mb-6 sm:mb-8">
-                                <i class="fas fa-rocket text-xl sm:text-2xl text-red-800"></i>
-                            </div>
-                            <h3 class="serif-heading text-2xl sm:text-3xl mb-3 sm:mb-4 uppercase">Launch Elite Pass</h3>
-                            <p class="text-xs sm:text-sm text-gray-500 mb-6 sm:mb-8 max-w-xs">
-                                Grab the 20% Launching Discount. Transition from retail noise to institutional clarity.
-                            </p>
-                            <div class="grid grid-cols-3 gap-4 sm:gap-6 w-full max-w-xs mb-8 sm:mb-10">
-                                <div class="flex flex-col">
-                                    <span id="card-h" class="text-2xl sm:text-3xl font-bold text-gray-900">00</span>
-                                    <span class="text-[8px] sm:text-[10px] text-gray-400 uppercase tracking-widest font-bold">Hours</span>
-                                </div>
-                                <div class="flex flex-col">
-                                    <span id="card-m" class="text-2xl sm:text-3xl font-bold text-gray-900">00</span>
-                                    <span class="text-[8px] sm:text-[10px] text-gray-400 uppercase tracking-widest font-bold">Mins</span>
-                                </div>
-                                <div class="flex flex-col">
-                                    <span id="card-s" class="text-2xl sm:text-3xl font-bold text-red-700">00</span>
-                                    <span class="text-[8px] sm:text-[10px] text-gray-400 uppercase tracking-widest font-bold">Secs</span>
-                                </div>
-                            </div>
-                            <a href="#enroll" class="btn-luxury w-full py-4 sm:py-5 text-center text-[9px] sm:text-[10px] font-bold uppercase tracking-widest">CLAIM 20% DISCOUNT</a>
-                        </div>
+                <div class="hidden lg:block w-full lg:w-[40%]">
+                    <!-- Space maintained for layout balance or future non-promotional imagery -->
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-red-900/5 rounded-full blur-3xl"></div>
+                        <img src="https://images.unsplash.com/photo-1611974717483-3600997e550c?q=80&w=2070&auto=format&fit=crop" alt="Trading Dashboard" class="relative rounded shadow-2xl opacity-90 border border-gray-100">
                     </div>
                 </div>
             </div>
@@ -412,8 +367,7 @@
                 <div class="text-center sm:text-left">
                     <h5 class="text-red-800 font-bold text-[10px] uppercase tracking-widest mb-2">Program Fee</h5>
                     <div class="flex items-baseline justify-center sm:justify-start gap-2">
-                        <span class="text-gray-400 line-through text-xs font-bold">₹6,999</span>
-                        <p class="text-2xl sm:text-3xl font-bold text-gray-900">₹5,599</p>
+                        <p class="text-2xl sm:text-3xl font-bold text-gray-900">₹6,999</p>
                     </div>
                 </div>
             </div>
@@ -437,12 +391,10 @@
                 </div>
 
                 <div class="bg-white p-8 sm:p-12 flex flex-col relative">
-                    <div class="absolute top-0 right-0 bg-red-800 text-white px-3 sm:px-4 py-1 text-[9px] sm:text-[10px] font-bold tracking-tighter">LAUNCH OFFER</div>
                     <h4 class="serif-heading text-xl sm:text-2xl mb-2">APC Mastery</h4>
                     <p class="text-[10px] text-red-700 font-bold uppercase tracking-widest mb-8">APC 2.0 Mastery Program</p>
                     <div class="mb-8">
-                        <span class="text-xl sm:text-2xl line-through text-gray-400 mr-2 font-light">₹6,999</span>
-                        <span class="text-4xl sm:text-5xl font-light text-gray-900">₹5,599</span>
+                        <span class="text-4xl sm:text-5xl font-light text-gray-900">₹6,999</span>
                         <span class="block text-xs text-gray-400 mt-2 font-bold uppercase tracking-widest">/ Lifetime Access</span>
                     </div>
                     <ul class="space-y-4 mb-10 text-xs sm:text-sm text-gray-500">
@@ -450,7 +402,7 @@
                         <li class="flex items-center gap-3"><i class="fas fa-check text-red-700"></i> High-Prob Proprietary Setups</li>
                         <li class="flex items-center gap-3"><i class="fas fa-check text-red-700"></i> Lifetime Investment </li>
                     </ul>
-                    <a href="https://wa.me/918837841183" class="mt-auto btn-luxury py-4 sm:py-5 text-center text-[10px] font-bold uppercase tracking-widest">Enroll with 20% Discount</a>
+                    <a href="https://wa.me/918837841183" class="mt-auto btn-luxury py-4 sm:py-5 text-center text-[10px] font-bold uppercase tracking-widest">Enroll Now</a>
                 </div>
             </div>
             <p class="mt-8 text-center text-gray-400 text-[10px] sm:text-xs italic px-4">"Risk comes from not knowing what you're doing." — Warren Buffett</p>
@@ -467,7 +419,7 @@
                         How do the trial sessions work?
                         <span class="group-open:rotate-180 transition-transform">↓</span>
                     </summary>
-                    <p class="mt-4 text-gray-500 text-xs sm:text-sm leading-relaxed">The "Initiation" trial consists of two live sessions for ₹999, which includes a direct intro to institutional market dominance and mentor interaction.</p>
+                    <p class="mt-4 text-gray-500 text-xs sm:text-sm leading-relaxed">The "Initiation" trial consists of two live sessions for ₹599, which includes a direct intro to institutional market dominance and mentor interaction.</p>
                 </details>
 
                 <details class="group luxury-card p-5 sm:p-6 rounded-none cursor-pointer">
@@ -496,51 +448,5 @@
         </div>
     </footer>
 
-    <script>
-        // Use localStorage to persist the end date across refreshes
-        let endDate = localStorage.getItem('apc_countdown_end');
-        
-        if (!endDate) {
-            // If no end date is stored, set it to 48 hours from now
-            endDate = new Date().getTime() + (48 * 60 * 60 * 1000);
-            localStorage.setItem('apc_countdown_end', endDate);
-        } else {
-            endDate = parseInt(endDate);
-        }
-        
-        function updateTimer() {
-            const currentTime = new Date().getTime();
-            const distance = endDate - currentTime;
-            
-            if (distance < 0) {
-                const els = ["h", "m", "s", "card-h", "card-m", "card-s"];
-                els.forEach(id => {
-                    const el = document.getElementById(id);
-                    if(el) el.innerText = "00";
-                });
-                return;
-            }
-
-            // Calculate hours, minutes, seconds
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, '0');
-
-            const setVal = (id, val) => {
-                const el = document.getElementById(id);
-                if(el) el.innerText = val;
-            }
-
-            setVal("h", hours);
-            setVal("m", minutes);
-            setVal("s", seconds);
-            setVal("card-h", hours);
-            setVal("card-m", minutes);
-            setVal("card-s", seconds);
-        }
-
-        setInterval(updateTimer, 1000);
-        updateTimer();
-    </script>
 </body>
 </html>
