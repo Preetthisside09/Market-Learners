@@ -27,7 +27,7 @@
             letter-spacing: 0.05em;
         }
 
-        /* Hero Section with Chart Background */
+        /* Hero Section Styling */
         .hero-section {
             position: relative;
             background-color: #ffffff;
@@ -121,6 +121,26 @@
             line-height: 0.8;
         }
 
+        /* Floating Animation for Terminal UI */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .animate-float-delayed {
+            animation: float 8s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+
+        .terminal-glow {
+            box-shadow: 0 0 30px rgba(153, 27, 27, 0.1);
+        }
+
         @media (min-width: 1024px) {
             .bg-watermark {
                 font-size: 40vw;
@@ -129,12 +149,8 @@
             }
         }
 
-        details > summary {
-            list-style: none;
-        }
-        details > summary::-webkit-details-marker {
-            display: none;
-        }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
     </style>
 </head>
 <body class="antialiased">
@@ -161,12 +177,14 @@
     </nav>
 
     <!-- HERO SECTION -->
-    <section class="hero-section min-h-[85vh] md:min-h-[90vh] flex items-center premium-gradient px-4 sm:px-8">
+    <section class="hero-section min-h-[90vh] flex items-center premium-gradient px-4 sm:px-8">
         <div class="hero-chart-overlay"></div>
         <div class="bg-watermark">APC</div>
 
         <div class="max-w-7xl mx-auto relative z-10 w-full py-12 md:py-20">
-            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                
+                <!-- Left Content -->
                 <div class="flex-1 text-center lg:text-left">
                     <div class="inline-flex items-center justify-center lg:justify-start gap-3 text-red-700 font-bold tracking-widest text-[10px] sm:text-xs uppercase mb-4 sm:mb-6">
                         <span class="hidden sm:block w-8 h-[1px] bg-red-700"></span> Institutional Grade Education
@@ -193,11 +211,59 @@
                     </div>
                 </div>
 
-                <div class="hidden lg:block w-full lg:w-[40%]">
-                    <!-- Space maintained for layout balance or future non-promotional imagery -->
-                    <div class="relative">
-                        <div class="absolute -inset-4 bg-red-900/5 rounded-full blur-3xl"></div>
-                        <img src="https://images.unsplash.com/photo-1611974717483-3600997e550c?q=80&w=2070&auto=format&fit=crop" alt="Trading Dashboard" class="relative rounded shadow-2xl opacity-90 border border-gray-100">
+                <!-- Right Content (Enhanced Space) -->
+                <div class="hidden lg:block w-full lg:w-[45%] relative">
+                    <!-- Decorative Background Elements -->
+                    <div class="absolute -top-20 -right-20 w-64 h-64 bg-red-100/30 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-slate-100/50 rounded-full blur-3xl"></div>
+
+                    <!-- Main Visual Container -->
+                    <div class="relative z-10">
+                        <!-- Main Dashboard Image -->
+                        <div class="relative group">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-red-800 to-slate-900 rounded opacity-20 blur group-hover:opacity-40 transition duration-1000"></div>
+                            <img src="https://images.unsplash.com/photo-1611974717483-3600997e550c?q=80&w=2070&auto=format&fit=crop" 
+                                 alt="Institutional Terminal" 
+                                 class="relative rounded border border-white/50 shadow-2xl grayscale-[20%] group-hover:grayscale-0 transition duration-700">
+                        </div>
+
+                        <!-- Floating Widgets -->
+                        <!-- 1. Institutional Flow -->
+                        <div class="absolute -top-10 -left-10 animate-float bg-white/90 backdrop-blur-md p-4 shadow-xl border border-red-50 w-48 terminal-glow">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-[8px] font-bold text-gray-400 uppercase tracking-tighter">Smart Money Index</span>
+                                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                            </div>
+                            <div class="text-xl font-bold text-gray-900 serif-heading">BULLISH</div>
+                            <div class="mt-2 h-1 w-full bg-gray-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-red-700 w-[84%]"></div>
+                            </div>
+                            <p class="text-[7px] mt-1 text-gray-500 italic">Volume Fingerprint Detected</p>
+                        </div>
+
+                        <!-- 2. R:R Ratio Highlight -->
+                        <div class="absolute bottom-10 -right-12 animate-float-delayed bg-slate-900 text-white p-5 shadow-2xl w-56">
+                            <div class="text-[10px] text-red-400 font-bold uppercase tracking-widest mb-1">Execution Edge</div>
+                            <div class="text-3xl font-bold serif-heading">1 : 8.5</div>
+                            <div class="text-[9px] text-gray-400 mt-2 flex items-center gap-2">
+                                <i class="fas fa-check-circle text-green-400"></i> Max Drawdown: 1.2%
+                            </div>
+                        </div>
+
+                        <!-- 3. Liquidity Zone Mockup -->
+                        <div class="absolute top-1/2 -left-20 transform -translate-y-1/2 hidden xl:flex flex-col gap-2">
+                            <div class="bg-red-700/10 border-l-4 border-red-700 p-2 backdrop-blur-sm">
+                                <div class="text-[8px] font-bold text-red-800 uppercase">Sell Side Liquidity</div>
+                            </div>
+                            <div class="bg-slate-700/10 border-l-4 border-slate-700 p-2 backdrop-blur-sm opacity-50">
+                                <div class="text-[8px] font-bold text-slate-800 uppercase">Equilibrium Zone</div>
+                            </div>
+                        </div>
+
+                        <!-- Scanline Overlay Effect -->
+                        <div class="absolute inset-0 pointer-events-none rounded overflow-hidden opacity-[0.03]">
+                            <div class="w-full h-full bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,3px_100%]"></div>
+                        </div>
                     </div>
                 </div>
             </div>
